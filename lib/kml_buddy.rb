@@ -1,7 +1,18 @@
 require "kml_buddy/version"
+require "zip"
 require "nokogiri"
 
 module KmlBuddy
+    def unzip_kmz(filename)
+        Zip::File.open(filename) do |zipfile|
+          zipfile.each do |file|
+              file_path = File.join('unzipped', file.name)
+              FileUtils.mkdir_p(File.dirname(file_path))
+            zipfile.extract(file, file_path)
+          end
+        end
+    end
+    
     def replace_kml_style_tag(filename)
         # open uploaded kml file
         original_kml = File.open(filename, 'r')
