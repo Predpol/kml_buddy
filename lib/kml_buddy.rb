@@ -13,6 +13,13 @@ module KmlBuddy
         end
     end
     
+    def zip_kml(filename)
+        name = filename.chomp(File.extname(filename)) + '.kmz'
+        Zip::File.open(name, Zip::File::CREATE) do |zipfile|
+            zipfile.add(filename, filename)
+        end
+    end
+    
     def replace_kml_style_tag(filename)
         # open uploaded kml file
         original_kml = File.open(filename, 'r')
