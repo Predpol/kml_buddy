@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = KmlBuddy::VERSION
   spec.authors       = ["Omar Qazi"]
   spec.email         = ["omar@predpol.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Some helpful functions for working with KML and KMZ}
+  spec.description   = %q{A helpful little library for dealing with KML and KMZ files from your friends at PredPol}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+  spec.add_dependency 'nokogiri'
 end
