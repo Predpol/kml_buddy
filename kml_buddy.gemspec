@@ -6,8 +6,8 @@ require 'kml_buddy/version'
 Gem::Specification.new do |spec|
   spec.name          = "kml_buddy"
   spec.version       = KmlBuddy::VERSION
-  spec.authors       = ["Omar Qazi"]
-  spec.email         = ["omar@predpol.com"]
+  spec.authors       = ["Omar Qazi", "Cotter Phinney"]
+  spec.email         = ["omar@predpol.com", "cotter@predpol.com"]
   spec.summary       = %q{Some helpful functions for working with KML and KMZ}
   spec.description   = %q{A helpful little library for dealing with KML and KMZ files from your friends at PredPol}
   spec.homepage      = ""
